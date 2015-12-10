@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("PRI.Messaging.Primitives")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Messaging primitives: set of interface to build messaging patterns upon.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Quicken Loans")]
+[assembly: AssemblyCompany("Peter Ritchie")]
 [assembly: AssemblyProduct("PRI.Messaging.Primitives")]
-[assembly: AssemblyCopyright("Copyright © Quicken Loans 2015")]
+[assembly: AssemblyCopyright("Copyright © Peter Ritchie 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
