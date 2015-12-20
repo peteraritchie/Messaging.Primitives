@@ -7,7 +7,5 @@
 	{
 		void AddTranslator<TIn, TOut>(IPipe<TIn, TOut> pipe) where TIn : IMessage where TOut : IMessage;
 		void AddHandler<TIn>(IConsumer<TIn> consumer) where TIn : IMessage;
-		void AddHandlersAndTranslators(string directory, string wildcard, string @namespace);
-		void AddHandlersAndTranslators(string directory, string wildcard);
 	}
 }
