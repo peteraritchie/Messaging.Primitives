@@ -4,6 +4,6 @@ namespace PRI.Messaging.Primitives
 {
 	public interface IEvent : IMessage
 	{
-		DateTime OccurreDateTime { get; set; }
+		DateTime OccurredDateTime { get; set; }
 	}
 }
