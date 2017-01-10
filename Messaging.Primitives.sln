@@ -1,9 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRI.Messaging.Primitives", "PRI.Messaging.Primitives\PRI.Messaging.Primitives.csproj", "{A4B3383A-B922-491B-9B74-91EE1647159A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{63833139-61D5-4E69-8A1B-663C902F0959}"
+	ProjectSection(SolutionItems) = preProject
+		PRI.Messaging.Primitives\PRI.Messaging.Primitives.nuspec = PRI.Messaging.Primitives\PRI.Messaging.Primitives.nuspec
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

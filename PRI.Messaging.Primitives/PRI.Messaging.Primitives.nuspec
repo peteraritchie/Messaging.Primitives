@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>PRI.Messaging.Primitives</id>
+    <version>$version$</version>
+    <authors>$author$</authors>
+    <licenseUrl>https://raw.githubusercontent.com/peteraritchie/Messaging.Primitives/develop/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/peteraritchie/Messaging.Primitives</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Added IAsyncConsumer and fixed some spelling in comments</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>Messaging message-oriented events primitives</tags>
+  </metadata>
+</package>
