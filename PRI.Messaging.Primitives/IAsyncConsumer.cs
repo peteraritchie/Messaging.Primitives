@@ -7,7 +7,12 @@ namespace PRI.Messaging.Primitives
 	/// Messages must implement <see cref="IMessage"/>, or an <see cref="IMessage"/>-derivative like <see cref="IEvent"/> or <see cref="ICommand"/>
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
-	public interface IAsyncConsumer<in T> : IConsumer<T> where T : IMessage
+#if SUPPORT_ASYNC_CONSUMER
+	public
+#else
+	internal
+#endif
+	interface IAsyncConsumer<in T> : IConsumer<T> where T : IMessage
 	{
 		Task HandleAsync(T message);
 	}

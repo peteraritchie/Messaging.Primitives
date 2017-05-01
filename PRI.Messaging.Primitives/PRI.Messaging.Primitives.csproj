@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAsyncConsumer.cs" />
+    <Compile Include="IAsyncPipe.cs" />
+    <Compile Include="IAsyncProducer.cs" />
     <Compile Include="IBus.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="IConsumer.cs" />
