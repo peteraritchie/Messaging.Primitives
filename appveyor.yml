@@ -5,23 +5,22 @@ branches:
   only:
   - master
 configuration: Release
-assembly_info:
-  patch: true
-  file: '**\AssemblyInfo.*'
-  assembly_version: '{version}'
-  assembly_file_version: '{version}'
-  assembly_informational_version: '{version}-beta{build}'
 nuget:
   disable_publish_on_pr: true
-build:
-  verbosity: minimal
-after_build:
-- ps: nuget.exe pack .\PRI.Messaging.Primitives\PRI.Messaging.Primitives.csproj -Prop Configuration=Release -Symbols -version $env:APPVEYOR_BUILD_VERSION
+build_script:
+- ps: >-
+    dotnet restore
+
+    dotnet build -c Release /p:Version=$env:APPVEYOR_BUILD_VERSION
+
+    dotnet pack-c Release  /p:Version=$env:APPVEYOR_BUILD_VERSION /p:PackageReleaseNotes="$env:APPVEYOR_REPO_COMMIT_MESSAGE$env:APPVEYOR_REPO_COMMIT_MESSAGE_EXTENDED" --include-symbols
 artifacts:
-- path: '*.nupkg'
+- path: PRI.Messaging.Primitives\bin\Release\*.nupkg
   name: nuget
 deploy:
 - provider: NuGet
   api_key:
     secure: K+dA1tJ3qNFfJ6G484VCFE9igeHb/BGa6tdJVKcaxvHYK6rwPsKrO/c5EahHvxsP
   artifact: nuget
+  on:
+    branch: master

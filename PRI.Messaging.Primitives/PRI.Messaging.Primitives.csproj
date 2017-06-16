@@ -1,63 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A4B3383A-B922-491B-9B74-91EE1647159A}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PRI.Messaging.Primitives</RootNamespace>
-    <AssemblyName>PRI.Messaging.Primitives</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFrameworks>netstandard1.0;net40</TargetFrameworks>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/peteraritchie/Messaging.Primitives/develop/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/peteraritchie/Messaging.Primitives</PackageProjectUrl>
+    <PackageTags>Messaging message-oriented events primitives</PackageTags>
+    <Description>Messaging primitives: set of interface to build messaging patterns upon.</Description>
+    <Authors>Peter Ritchie</Authors>
+    <Company>Peter Ritchie</Company>
+    <Copyright>Copyright © Peter Ritchie 2017</Copyright>
+    <PackageReleaseNotes>Support for .NET Standard 1.0</PackageReleaseNotes>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Version>1.0.13</Version>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="IAsyncConsumer.cs" />
-    <Compile Include="IAsyncPipe.cs" />
-    <Compile Include="IAsyncProducer.cs" />
-    <Compile Include="IBus.cs" />
-    <Compile Include="ICommand.cs" />
-    <Compile Include="IConsumer.cs" />
-    <Compile Include="IEvent.cs" />
-    <Compile Include="IMessage.cs" />
-    <Compile Include="IPipe.cs" />
-    <Compile Include="IProducer.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+	<ItemGroup Condition="'$(TargetFramework)'=='net40'">
+		<Reference Include="System" />
+		<Reference Include="System.Core" />
+	</ItemGroup>
 </Project>
