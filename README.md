@@ -1,5 +1,10 @@
 Messaging.Primitives
 ====================
+
+|NOTE|
+|-|
+Messaging.Primitives and Messaging.Patterns have been merged into a single repo at <https://github.com/peteraritchie/Messaging>
+
 [![Build status](https://ci.appveyor.com/api/projects/status/ewdko4tv63tudbcf?svg=true)](https://ci.appveyor.com/project/peteraritchie/messaging-primitives)
 
 Messaging.Primities is a small, independent and decoupled, class library to contain message-oriented abstractions. For the most part this library will only contain interfaces but may contain base classes in the future
