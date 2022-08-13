@@ -1,7 +1,7 @@
 Messaging.Primitives
 ====================
 
-|NOTE|
+| ****************************************** NOTE ****************************************** |
 |-|
 Messaging.Primitives and Messaging.Patterns have been merged into a single repo at <https://github.com/peteraritchie/Messaging>
 
